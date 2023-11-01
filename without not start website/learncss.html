@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2code - Learn Web Development From Scratch</title>
+    <link rel="icon" type="image/x-icon" href="img/photo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html.css">
+</head>
+
+<body onload="hideBtn()">
+    <section class="header" style="min-height: 60vh;">
+        <nav>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learnhtml.html">HTML</a></li>
+                    <li><a href="learncss.html">CSS</a></li>
+                    <li><a href="learnjs.html">JAVASCRIPT</a></li>
+                    <li><a href="editor.html">CODE EDITOR</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="text_box">
+            <h1>      Start Learning CSS</h1>
+            <h2>CASCADING STYLE SHEET</h2>
+            <p></p>
+            <a href="#learncss" class="linkBtn">START LEARNING</a>
+        </div>
+    </section>
+    <section class="info_container d-flex">
+        <div class="sidebar">
+            <header>CSS</header>
+            <ul>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Introduction</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">CSS Colors</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Text Formatting</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Padding/Margin</a></li>
+            </ul>
+        </div>
+        <section class="sec_container" id="learncss">
+            <section id="cssintro" class="htmldisplayarea">
+                <h1>What is CSS?</h1>
+                <ul>
+                    <li>CSS stands for Cascading Style Sheet</li>
+                    <li>Cascading Style Sheets (CSS) is used to format the layout of a webpage.</li>
+                </ul>
+                <p>With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are
+                    positioned and laid out, what background images or background colors are to be used, different displays for different
+                    devices and screen sizes, and much more!
+                </p>
+                <h1>Using CSS</h1>
+                <p>CSS can be added to HTML documents in 3 ways:</p>
+                <ol>
+                    <li>Inline</li>
+                    <li>Internal</li>
+                    <li>External</li>
+                </ol>
+                <h1>Inline CSS</h1>
+                <p>An inline CSS is used to apply a unique style to a single HTML element.</p>
+                <p>An inline CSS uses the style attribute of an HTML element.</p>
+                
+                <h2 style="margin: 10px;">Basic Example:</h2>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 style="color:blue;" &gt;My First Heading&lt;/h1&gt;
+        &lt;p style="color:red;" &gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Internal CSS</h1>
+                <p>An internal CSS is used to define a style for a single HTML page.</p>
+                <p>An internal CSS is defined in the &lt;head&gt; section of an HTML page, within a &lt;style&gt; element.</p>
+                <p>Achieved with the use of selectors(defines single or multiple element of html)</p>
+                <h2 style="margin: 10px;">Basic Example:</h2>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;style&gt;
+            body {background-color: powderblue;}
+            h1   {color: blue;}
+            p    {color: red;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My First Heading&lt;/h1&gt;
+        &lt;p&gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>External CSS</h1>
+                <p>An external style sheet is used to define the style for many HTML pages</p>
+                <p>To use an external style sheet, add a link to it in the &lt;head&gt; section of each HTML page:</p>
+                <p>Achieved with the use of selectors(defines single or multiple element of html)</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;link rel = "stylesheet" href = "path of css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </code>
+            </section>
+            <section id="colors" class="htmldisplayarea d-none">
+                <h1>CSS Colors</h1>
+                <p>We can use colors in three types:</p>
+                <ol>
+                    <li>Using Color Name like red, blue, white, etc</li>
+                    <li>Using Hex Code like #fff</li>
+                    <li>using rgb like rgb(f,f,f)</li>
+                </ol>
+                <p>Text Color Example</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 style="color:blue;"&gt;My First Heading&lt;/h1&gt;
+        &lt;p style="color:red;"&gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>background Color Example</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body style="background-color:black;"&gt;
+        &lt;h1 style="color:white;"&gt;My First Heading&lt;/h1&gt;
+        &lt;p style="color:white;"&gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>CSS Border Color</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body style="background-color:black;"&gt;
+        &lt;h1 style="color:white; border ="1px solid white"&gt;My First Heading&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section> 
+            <section id="txtFormatting" class="htmldisplayarea d-none">
+                <h1>Text Alignment</h1>
+                <p>The text-align property is used to set the horizontal alignment of a text.</p>
+                <p>A text can be left or right aligned, centered, or justified.</p>
+                
+                <p>Basic Example</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p style = "text-align: center;" &gt; Centered aligned Text &lt;/p&gt;
+        &lt;p style = "text-align: left;" &gt; Left aligned Text &lt;/p&gt;
+        &lt;p style = "text-align: right;" &gt; Right aligned Text &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Font Family</h1>
+                <p>The font-family property is used to set the font style of a text.</p>
+                
+                <p>Basic Example</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p style = "font-family: monospace;" &gt; This is monospace font &lt;/p&gt;
+        &lt;p&gt; This is default font &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Font Size</h1>
+                <p>The font-size property is used to set the font size of a text.</p>
+                
+                <p>Basic Example</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p style = "font-size: 30px;" &gt; Large Text &lt;/p&gt;
+        &lt;p&gt; This is Normal Text &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Text Decoration</h1>
+                <p>The text-decoration property is used to set the underline for a text.</p>
+                <p>Value can be any style like dotted, double, solid,...etc</p>
+                <p>Basic Example</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p style = "text-decoration: underline #f00 solid; font-size:25px;" &gt; Underlined Text &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section>
+            <section id="pad-mar" class="htmldisplayarea d-none">
+                <h1>CSS Padding</h1>
+                <p>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</p>
+                <p>All the padding properties can have the following values:</p>
+                <ul>
+                    <li>length - specifies a padding in px, pt, cm, etc.</li>
+                    <li>Percent - specifies a padding in % of the width of the containing element</li>
+                    <li>inherit - specifies that the padding should be inherited from the parent element</li>
+                </ul>
+                <p>Note: Negative values are not allowed.</p>
+                    <code>
+                        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p style="padding: 10px; border:1px solid black;"&gt;Hello World&lt;/p&gt
+            &lt;p style="padding-left: 50px; border:1px solid black;"&gt;Padding from left&lt;/p&gt
+        &lt;/body&gt;
+    &lt;/html&gt;
+                        </pre>
+                        <button class="runCode">Run This Code</button>
+                    </code>
+                    <h1>CSS Margin</h1>
+                    <p>The CSS margin properties are used to create space around elements, outside of any defined borders.</p>
+                    <p>All the margin properties can have the following values:</p>
+                    <ul>
+                        <li>auto - the browser calculates the margin</li>
+                        <li>length - specifies a margin in px, pt, cm, etc.</li>
+                        <li>Percent - specifies a margin in % of the width of the containing element</li>
+                        <li>inherit - specifies that the margin should be inherited from the parent element</li>
+                    </ul>
+                    <p>Note: Negative values are allowed.</p>
+                    <code>
+                        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p style="margin: 10px; border:1px solid black;"&gt;Hello World&lt;/p&gt
+            &lt;p style="margin-top: 50px; border:1px solid black;"&gt;Margin from top&lt;/p&gt
+        &lt;/body&gt;
+    &lt;/html&gt;
+                        </pre>
+                        <button class="runCode">Run This Code</button>
+                    </code>
+            </section> 
+            
+        </section>
+    </section>
+
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h1>Resources</h1>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Code EDITOR</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Email Us</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Developer</h1>
+                <ul></ul>
+                    <li>KARAN</li>
+                    <li>BCA 1st Year (2nd Semester)</li>
+                    <li>Roll No 4308/22</li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h1>Social</h1>
+                <ul>
+                    <li><img src="img/facebook.webp" width="32" style="width: 32px;"></li>
+                    <li><img src="img/insta.png" width="32" style="width: 32px;"></li>
+                    <li><img src="img/twitter.png" width="32" style="width: 32px;"></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        var htmenucounter = 0;
+        var sideitem = document.querySelectorAll(".sideItems");
+        var htmlcont = document.querySelectorAll(".htmldisplayarea")
+        function sideView(x){
+            sideitem.forEach(
+            (sideitem, index) =>{
+                if(sideitem != x){
+                    sideitem.style.color = "white"
+                }
+                else{
+                    sideitem.style.color = "red";
+                    htmenucounter = index;
+                }
+            }
+        )
+        display()
+        }
+
+        function display(){
+            htmlcont.forEach(
+                (htmlcon, index) => {
+                    if(index != htmenucounter){
+                        htmlcon.style.display = "none";
+                    }
+                    else{
+                        htmlcon.style.display = "block";
+                    }
+                }
+            )
+        }        
+    </script>
+</body>
+
+</html>

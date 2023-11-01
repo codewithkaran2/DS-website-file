@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time2code- Code Editor</title>
+  <link rel="icon" type="image/x-icon" href="img/photo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/editor.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo">
+      </a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learnhtml.html">HTML</a></li>
+          <li><a href="learncss.html">CSS</a></li>
+          <li><a href="learnjs.html">JAVASCRIPT</a></li>
+          <li><a href="editor.html">CODE EDITOR</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class="heading">HTML/CSS/JS CODE EDITOR - BY KARAN</h1>
+    
+  </section>
+  <section class="editor_area">
+    <div>
+      <textarea id="editor" placeholder="Type your HTML/CSS/JavaScript code here" onkeypress="tabKey()"></textarea>
+      <button id="run-btn">Run</button>
+    </div>
+    <iframe src="code.html" title="Result of Code" id="runframe" name="runframe">
+    </iframe>
+
+  </section>
+  <div class="footer">
+    <div class="contain">
+      <div class="col">
+        <h1>Company</h1>
+        <ul>
+          <li>About</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h1>Resources</h1>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Code EDITOR</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Support</h1>
+        <ul>
+          <li>Email Us</li>
+          <li>Feedback</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Developer</h1>
+        <ul>
+            <li>KARAN </li>
+            <li>BCA 1st Year (2nd Semester)</li>
+            <li>Roll No 4308/22</li>
+        </ul>
+    </div>
+      <div class="col social">
+        <h1>Social</h1>
+        <ul>
+          <li><img src="img/facebook.webp" width="32" style="width: 32px;"></li>
+          <li><img src="img/insta.png" width="32" style="width: 32px;"></li>
+          <li><img src="img/twitter.png" width="32" style="width: 32px;"></li>
+        </ul>
+      </div>
+      <hr>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

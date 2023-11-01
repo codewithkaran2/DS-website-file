@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2code - Learn Web Development From Scratch</title>
+    <link rel="icon" type="image/x-icon" href="img/photo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html.css">
+</head>
+
+<body onload="hideBtn()">
+    <section class="header" style="min-height: 60vh;">
+        <nav>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learnhtml.html">HTML</a></li>
+                    <li><a href="learncss.html">CSS</a></li>
+                    <li><a href="learnjs.html">JAVASCRIPT</a></li>
+                    <li><a href="editor.html">CODE EDITOR</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="text_box">
+            <h1>Start with HTML</h1>
+            <h2>HYPER TEXT MARKUP LANGUAGE</h2>
+            <p></p>
+            <a href="#learnhtml" class="linkBtn">START LEARNING</a>
+        </div>
+    </section>
+    <section class="info_container d-flex">
+        <div class="sidebar">
+            <header>HTML</header>
+            <ul>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Introduction</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Lists</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Images</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Tables</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Linking Documents</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Frames</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Forms</a></li>
+            </ul>
+        </div>
+        <section class="sec_container" id="learnhtml">
+             <section id="intro" class="htmldisplayarea">
+                <h1>What is HTML?</h1>
+                <ul>
+                    <li>HTML stands for Hyper Text Markup Language</li>
+                    <li>HTML is the standard markup language for creating Web pages</li>
+                    <li>HTML describes the structure of a Web page</li>
+                    <li>HTML consists of a series of elements</li>
+                    <li>HTML elements tell the browser how to display the content</li>
+                </ul>
+
+                <h1>Features of HTML</h1>
+                <ul>
+                    <li>It is platform-independent.</li>
+                    <li>Images, videos, and audio can be added to a web page.</li>
+                    <li>Hypertext can be added to the text.</li>
+                    <li>It is a markup language.</li>
+                    <li>It is interpreted language</li>
+                    <li>It can be integrated with other languages like CSS, JavaScript etc.</li>
+                    <li>Semantic Structure.</li>
+                    <li>local Storage &amp; Indexed DB – Client-side data storage.</li>
+                    <li>Offline Capabilities (PWA) with Cache API &amp; Service Workers.</li>
+                </ul>
+                <h1>History of HTML</h1>
+                <ul>
+                    <li>In <strong>1989</strong>, <span style="color: rgb(230, 126, 35);"><strong>Tim Berners Lee</strong></span> established <span style="color: rgb(35, 111, 161);">www</span> and created <span style="color: rgb(230, 126, 35);"><strong>HTML</strong></span> in <strong>1991</strong>.&nbsp;</li>
+                    <li>From <strong>1995 to 1997, </strong>he started working on versions of HTML.</li>
+                    <li>In <strong>1999</strong>, a committee was organized that made <strong>HTML4.0</strong> a standard.</li>
+                    <li><strong>HTML4.0</strong> is used by many, even today. However, the stable version of HTML is 5.0 also known as <strong>HTML5</strong>.</li>
+                </ul>
+                <h2 style="margin: 10px;">Basic Example:</h2>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My First Heading&lt;/h1&gt;
+        &lt;p&gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section>
+            <section id="list" class="htmldisplayarea d-none">
+                <h1>HTML Lists</h1>
+                <p>Our day-to-day lives revolve around lists. For example, We purchase items while shopping. A list of all our items is included on the bill we receive from the shopkeeper. Similarly, web developers use lists to display the data. </p>
+                <p><strong>HTML lists</strong> are used to display the data in an ordered and unordered form. List contains one or more list elements.</p>
+                <p>The HTML list is of three types:</p>
+                <ul style="list-style-type: square;">
+                    <li><strong>An unordered list.</strong></li>
+                    <li><strong>An ordered list.</strong></li>
+                    <li><strong>A definition list.</strong></li>
+                </ul>
+                <h1>
+                    HTML Unordered List
+                </h1>
+                <ul>
+                    <li>Unordered lists have no sequence.</li>
+                    <li>They are more like bullet points.&nbsp;</li>
+                    <li>They are created by using &lt;ul&gt; tag.</li>
+                    <li>&lt;ul&gt; tag has its corresponding &lt;/ul&gt; tag.</li>
+                    <li>For items, we use &lt;li&gt; tag also known as the List Item tag.</li>
+                </ul>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Fruits List.&lt;/p&gt;
+        &lt;ul type = "square"&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Mango&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>type attribute:</h1>
+                <p>Type attribute is used to specify the type of bullet. </p>
+                <p>There are three types of bullets:</p>
+                <ul>
+                    <li>disc</li>
+                    <li>square</li>
+                    <li>circle</li>
+                </ul>
+                <h1>
+                    HTML Ordered List
+                </h1>
+                <ul>
+                    <li>Ordered lists have a sequence.</li>
+                    <li>They are a more like numbered list.</li>
+                    <li>They are created by using the &lt;ol&gt; tag.</li>
+                    <li>For items, we use &lt;li&gt; tag also known as the List Item tag.</li>
+                </ul>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Fruits List.&lt;/p&gt;
+        &lt;ol type = "a"&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Mango&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>type attribute:</h1>
+                <p>Type attribute is used to specify the type of numbering we want. </p>
+                <p>There are five types of numbering:</p>
+                <ol>
+                    <li>Uppercase Roman Numerals (I,II,III,...)</li>
+                    <li>Lowercase Roman Numerals (i,ii,iii,...)</li>
+                    <li>Numerals (1,2,3,...)</li>
+                    <li>Lowercase Letters (a,b,c,...z)</li>
+                    <li>Uppercase Letters (A,B,C,...Z)</li>
+                </ol>
+                <h1>start attribute:</h1>
+                <p>For &lt;ol&gt; tag, the start attribute is used to specify the starting of numbering.</p>
+                <h1>Basic Example</h1><br>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Fruits List.&lt;/p&gt;
+        &lt;ol type = "a" start = "4"&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Mango&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>
+                    HTML Definition List
+                </h1>
+                <ul>
+                    <li>Definition List is also known as <strong>Description List</strong>.</li>
+                    <li>Definition List works the same as a dictionary works.</li>
+                    <li>Dictionary is used for describing the term similarly in HTML we use a Definition List or Description List to define a term.</li>
+                </ul>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Word List&lt;/p&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;Static website&lt;/dt&gt;
+            &lt;dd&gt;a website built with pages of static content, or plain html, Javascript, or CSS code.&lt;/dd&gt;
+            &lt;dt&gt;Dynamic Website&lt;/dt&gt;
+            &lt;dd&gt;presents different information to different visitors.&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section> 
+            <section id="img" class="htmldisplayarea d-none">
+                <h1>HTML Images</h1>
+                <p>To represent HTML pages beautifully and to explain content, we use images for that. Our ability to comprehend complex things is aided by visual representations to do that we use images.</p>
+                <p>It is self closing tag means no need to close it.</p>
+                <p>&lt;img&gt; tag is used to add an image to the webpage</p>
+                <p>src is mandatory attribute for &lt;img&gt; tag</p>
+                <h1>src attribute</h1>
+                <p>src attribute defines the path of an image.</p>
+                <p>There are two ways to specify the URL in the src attribute:</p>
+                <ol>
+                    <li>Absolute URL - Links to an external image that is hosted on another website. <br>
+                    For example:- src = "https://www.tryschools.com/images/img_girl.jpg"</li>
+                    <li>Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain
+                        name. If the URL begins without a slash, it will be relative to the current page. <br>
+                    For example:- src = "/images/img_girl.jpg".</li>
+                </ol>
+                <h1>alt attribute</h1>
+                <p>The required alt attribute for the &lt;img&gt; tag specifies an alternate text for an image, if the image for some reason
+                    cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen
+                    reader.</p>
+                <h1>height/width attribute</h1>
+                <p>&lt;img&gt; tag uses the height or width attribute to set the height or width of an image. Values for height or width attribute must be in pixel(default) or percentage and value should be placed in double quotes otherwise we can see an error.</p>
+                <h1>Basic Example of Image</h1>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;img src = "https://blog.hubspot.com/hubfs/GettyImages-1177482693.jpg" alt="Image Loading" height="100" width="200" &gt;
+    &lt;img src = "GettyImages.jpg" alt="Image Loading"&gt; &lt;!-- Broken Image --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section>
+             <section id="tables" class="htmldisplayarea d-none">
+                <h1>HTML Tables</h1>
+                <p>A table in HTML consists of table cells inside rows and columns.</p>
+                <p>&lt;table&gt tag is used to define a table on an HTML page</p>
+                <p>we can arrange our data in rows and columns of a table.</p>
+                <p>we can use may tags inside table tag like tr, td, th, etc</p>
+                <h1>tr/td/th tag in Table</h1>
+                <p>Each table row starts with a &lt;tr&gt; and ends with a &lt;/tr&gt; tag. tr stands for table row.</p>
+                <p>Each table cell is defined by a &lt;td&gt; and a &lt;/td&gt; tag. td stands for table data.</p>
+                <p>Sometimes you want your cells to be table header cells. In those cases use the &lt;th&gt; tag instead of the &lt;td&gt; tag. th
+                    stands for table header.</p>
+                    <code>
+                        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Name&lt;/th&gt;
+                    &lt;th&gt;Email Id&lt;/th&gt;
+                    &lt;th&gt;Phone No.&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;John&lt;/th&gt;
+                    &lt;th&gt;johne22@hotmail.com&lt;/th&gt;
+                    &lt;th&gt;892909092&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Alpha&lt;/th&gt;
+                    &lt;th&gt;alpha48@gmail.com&lt;/th&gt;
+                    &lt;th&gt;22903999&lt;/th&gt;
+                &lt;/tr&gt
+            &lt;/table&gt
+        &lt;/body&gt;
+    &lt;/html&gt;
+                        </pre>
+                        <button class="runCode">Run This Code</button>
+                    </code>
+                    <h1>Rowspan & Colspan attribute</h1>
+                    <p>To make a cell span over multiple rows, use the rowspan attribute.</p>
+                    <p>To make a cell span over multiple columns, use the colspan attribute.</p>
+                    <code>
+                        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;th colspan = "2" border="1" &gt;Name&lt;/th&gt;
+                    &lt;th&gt;Phone No.&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;John&lt;/th&gt;
+                    &lt;th&gt;Marsh&lt;/th&gt;
+                    &lt;th&gt;892909092&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Alpha&lt;/th&gt;
+                    &lt;th&gt;Noman&lt;/th&gt;
+                    &lt;th&gt;22903999&lt;/th&gt;
+                &lt;/tr&gt
+            &lt;/table&gt
+        &lt;/body&gt;
+    &lt;/html&gt;
+                        </pre>
+                        <button class="runCode">Run This Code</button>
+                    </code>
+            </section> 
+             <section id="linking" class="htmldisplayarea d-none">
+                <h1>HTML Links</h1>
+                <ul>
+                    <li>These are specified by &lt;a&gt; tag.</li>
+                    <li>HTML LINKS are also known as HYPERLINK.</li>
+                    <li>&lt;a&gt; tag is known as an Anchor tag.</li>
+                    <li>&lt;a&gt; tag has its corresponding &lt;/a&gt; tag.</li>
+                    <li>These are used to link one document with another document.</li>
+                </ul>
+                <h1>Attributes of Link</h1>
+                <ol>
+                    <li>href :- Without this tag, we are unable to go to the next page or the next document. This attribute is compulsorily used by the &lt;a&gt; tag. This attribute contains a URL path.</li>
+                    <li> target :- The link tag uses another attribute which is the target attribute. By default, if we open any link then the page will be displayed in the current browser window. But if we wish to change these settings then we use the target attribute. It tells us where we want our linked document to be opened. This target attribute can use any of the values:
+                        <ul type="disc">
+                            <li>_blank: Opens linked document in a new window</li>
+                            <li>_top: Opens document in the full body of the window</li>
+                            <li>_self: Opens document in the same window</li>
+                            <li>_parent: Opens linked document in a parent frame</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h1>Basic Example</h1>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href = "index.html" &gt; Go to Google Page with _self &lt;/a&gt;&lt;br&gt;
+        &lt;a href = "index.html" target = "_blank" &gt; Go to Google Page with _blank &lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>BookMark\Internal Linking</h1>
+                <p>Bookmarks can be useful if a web page is very long.</p>
+                <p>To create a bookmark - first create the bookmark, then add a link to it.</p> 
+                <p>When the link is clicked, the page will scroll down or up to the location with the bookmark.
+                </p>
+                <p>Steps for creating bookmark</p>
+                <ol>
+                    <li>First, use the id attribute to create a bookmark:</li>
+                    <li>Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:</li>
+                </ol>
+                <h1>Example</h1>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;&lt;a href="#C4"&gt;Jump to Chapter 4&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#C10"&gt;Jump to Chapter 10&lt;/a&gt;&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 1&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 2&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 3&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2 id="C4"&gt;Chapter 4&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 5&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 6&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 7&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 8&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 9&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2 id="C10"&gt;Chapter 10&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 11&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 12&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 13&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 14&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 15&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+        
+        &lt;h2&gt;Chapter 16&lt;/h2&gt;
+        &lt;p&gt;This chapter explains ba bla bla&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Link Colors</h1>
+                <p>Three types of links are there: active, visited, and unvisited.</p>
+                <ul>
+                    <li>Active: It is in red with an underline.</li>
+                    <li>Visited: It is purple and underlined.</li>
+                    <li>Unvisited: It is blue and underlined.</li>
+                </ul>
+                <p>By CSS we can change the color of the links.</p>
+            </section> 
+             <section id="frames" class="htmldisplayarea d-none">
+                <h1>HTML Frames</h1>
+                <p>The HTML &lt;iframe&gt; tag specifies an inline frame.</p>
+                <p>An inline frame is used to embed another document within the current HTML document.</p>
+                <p>Tip: It is a good practice to always include a title attribute for the &lt;iframe&gt;. This is used by screen readers to read out what the content of the iframe is.</p>
+                <h1>height/width Attribute</h1>
+                <p>Use the height and width attributes to specify the size of the iframe.</p>
+                <p>The height and width are specified in pixels by default.</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;iframe src = "index.html" height = "100" width="150" name = "exframe" title = "Home Page" &gt;&lt;/iframe&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Target for a Link</h1>
+                <p>An iframe can be used as the target frame for a link.</p>
+                <p>The target attribute of the link must refer to the name attribute of the iframe:</p>
+                <code>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;iframe src = "index.html" height = "100" width="150" name = "exframe" title = "Home Page"&gt; &lt;/iframe&gt;
+    &lt;a href = "editor.html" target = "exframe"&gt;Go to&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <button class="runCode">Run This Code</button>
+            </code>
+            </section> 
+            <section id="form" class="htmldisplayarea d-none">
+                <h1>HTML Forms</h1>
+                <p>Forms are the interactive part of the web page. They are used to take user’s input in different ways. These inputs are taken using various controls. The data collected by these controls can be used for processing, storing etc.</p>
+                <p>The HTML &lt;form&gt; element is used to create an HTML form for user input</p>
+                <p>The &lt;form&gt; element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+                <h1>The &lt;input&gt; Element</h1>
+                <p>HTML &lt;input&gt; element is the most used form element.</p>
+                <p>&lt;input&gt; is self closing tag</p>
+                <p>An &lt;input&gt; element can be displayed in many ways, depending on the type attribute.</p>
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>text</td>
+                        <td>Displays a single-line text input field</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Displays a single-line text input field for email only</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>Displays a single-line text input field for passwords (hide characters)</td>
+                    </tr>
+                    <tr>
+                        <td>radio</td>
+                        <td>Displays a radio button (for selecting one of many choices)</td>
+                    </tr>
+                    <tr>
+                        <td>checkbox</td>
+                        <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+                    </tr>
+                    <tr>
+                        <td>submit</td>
+                        <td>Displays a submit button (for submitting the form)</td>
+                    </tr>
+                    <tr>
+                        <td>reset</td>
+                        <td>Displays a submit button (for reset all the inputs of form)</td>
+                    </tr>
+                </table>
+                <h1>input tag Attributes</h1>
+                <table>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>defines value to be stored in database</td>
+                    </tr>
+                    <tr>
+                        <td>required</td>
+                        <td>specifies that an input field must be filled out before submitting the form</td>
+                    </tr>
+                    <tr>
+                        <td>height/width</td>
+                        <td>specifies height and width of input tag</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>a reference when the data is submitted</td>
+                    </tr>
+                </table>
+                <h1>Input Examples</h1>
+                <code>
+                    <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form&gt;
+            &lt;p&gt; Name &lt;/p&gt;        
+            &lt;input type ="text" name = "Name" &gt;
+            &lt;p&gt; Email Id &lt;/p&gt; 
+            &lt;input type ="email" name = "Email" &gt;
+            &lt;p&gt; Password &lt;/p&gt; 
+            &lt;input type ="password" name = "Password" &gt;
+            &lt;p&gt; Gender &lt;/p&gt; 
+            &lt;input type ="radio" name = "Gender" value="Male"&gt;Male
+            &lt;input type ="radio" name = "Gender" value="Male"&gt;Female
+            &lt;input type ="radio" name = "Gender" value="Male"&gt;Other
+            &lt;p&gt; Favourite Cars &lt;/p&gt; 
+            &lt;input type ="checkbox" name = "Name" value="Male"&gt;Male
+            &lt;input type ="checkbox" name = "Name" value="Male"&gt;Female
+            &lt;input type ="checkbox" name = "Name" value="Male"&gt;Other
+        &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+
+                
+            </section>
+            
+        </section>
+    </section>
+
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h1>Resources</h1>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Code EDITOR</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Email Us</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Developer</h1>
+                <ul>
+                    <li>KARAN</li>
+                    <li>BCA 1st Year (2nd Semester)</li>
+                    <li>Roll No 4308/22</li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h1>Social</h1>
+                <ul>
+                    <li><img src="img/facebook.webp" width="32" style="width: 32px;"></li>
+                    <li><img src="img/insta.png" width="32" style="width: 32px;"></li>
+                    <li><img src="img/twitter.png" width="32" style="width: 32px;"></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        var htmenucounter = 0;
+        var sideitem = document.querySelectorAll(".sideItems");
+        var htmlcont = document.querySelectorAll(".htmldisplayarea")
+        function sideView(x){
+            sideitem.forEach(
+            (sideitem, index) =>{
+                if(sideitem != x){
+                    sideitem.style.color = "white"
+                }
+                else{
+                    sideitem.style.color = "red";
+                    htmenucounter = index;
+                }
+            }
+        )
+        display()
+        }
+
+        function display(){
+            htmlcont.forEach(
+                (htmlcon, index) => {
+                    if(index != htmenucounter){
+                        htmlcon.style.display = "none";
+                    }
+                    else{
+                        htmlcon.style.display = "block";
+                    }
+                }
+            )
+        }        
+    </script>
+</body>
+
+</html>

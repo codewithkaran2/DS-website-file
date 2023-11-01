@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2code - Learn Web Development From Scratch</title>
+    <link rel="icon" type="image/x-icon" href="img/photo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html.css">
+</head>
+
+<body onload="hideBtn()">
+    <section class="header" style="min-height: 60vh;">
+        <nav>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learnhtml.html">HTML</a></li>
+                    <li><a href="learncss.html">CSS</a></li>
+                    <li><a href="learnjs.html">JAVASCRIPT</a></li>
+                    <li><a href="editor.html">CODE EDITOR</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="text_box">
+            <h1>Start Learning JS</h1>
+            <h2>JAVASCRIPT</h2>
+            <p></p>
+            <a href="#learnjs" class="linkBtn">START LEARNING</a>
+        </div>
+    </section>
+    <section class="info_container d-flex">
+        <div class="sidebar">
+            <header>JS</header>
+            <ul>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Introduction</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Data Types</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Variables</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Functions</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Strings</a></li>
+                <li><a href="#" class="sideItems" onclick="sideView(this)">Arrays</a></li>
+            </ul>
+        </div>
+        <section class="sec_container" id="learnjs">
+            <section id="jsintro" class="htmldisplayarea">
+                <h1>What is JS?</h1>
+                <ul>
+                    <li>JS stands for JavaScript</li>
+                    <li>JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web.
+                        JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced.</li>
+                    <li>JavaScript and Java are completely different languages, both in concept and design. JavaScript was invented by
+                        Brendan Eich in 1995, and became an ECMA standard in 1997.</li>
+                    <li>JavaScript Can Change HTML Content</li>
+                </ul>
+                <h1>Features of Javascript</h1>
+                <ul>
+                    <li>Javascript executes the client-side script in the browser.</li>
+                    <li>Events are actions. Javascript provides event-handling options.</li>
+                    <li>As Javascript is not a compiled language, source code never changes to byte code before running time. Low-end devices can also run Javascript because of its lightweight feature.</li>
+                    <li>In Javascript, names, variables, keywords, and functions are case-sensitive.</li>
+                    <li>Javascript will run in the same way in all systems with any operating system.</li>
+                </ul>
+                <p>Basic JavaScript Program to write message</p>
+                <code>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script&gt;
+            document.write("Hello World");
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section>
+            <section id="DataTypes" class="htmldisplayarea d-none">
+                <h1>Data Types</h1>
+                <p>JavaScript has 8 Datatypes:</p>
+                <ol>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Bigint</li>
+                    <li>Boolean</li>
+                    <li>Undefined</li>
+                    <li>Null</li>
+                    <li>Symbol</li>
+                    <li>Object</li>
+                </ol>
+                <p>String Data Type Example</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let msg = "Hello";
+    document.write(msg);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>Number Data Type Example</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let num1 = 10;
+    let num2 = 29.3;
+    document.write(num1);
+    document.write("&lt;br&gt;");
+    document.write(num2);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>Boolean Data Type Example</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let eval = true;
+    document.write(eval);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>Object Data Type Example</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const person = {firstName:"Mark", lastName:"Harry"};
+    document.write(person.firstName+" "+person.lastName);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>Array Object Example</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const fruit = ["Apple", "Banana", "Litchi", "Strawberry"];
+    document.write("First fruit of array is " + fruit[0]);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>Date Object Example</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const date = new Date("2022-03-25");
+    document.write(date.getFullYear());
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section> 
+            <section id="variables" class="htmldisplayarea d-none">
+                <h1>Variables</h1>
+                <p>In a programming language, variables are used to store data values.</p>
+                <p>JavaScript uses the keywords var, let and const to declare variables.</p>
+                <p>An equal sign is used to assign values to variables.</p>
+                <table>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>var</td>
+                        <td>Declares a variable</td>
+                    </tr>
+                    <tr>
+                        <td>let</td>
+                        <td>Declares a block variable</td>
+                    </tr>
+                    <tr>
+                        <td>const</td>
+                        <td>Declares a block constant</td>
+                    </tr>
+                </table>
+                <p>Basic Example to show difference between var and let</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let a = 10;
+    {
+        let a = 70;
+        document.write("a (inside block) = " + a+"&lt;br&gt;")
+    }
+    document.write("a (outside block) = " + a+"&lt;br&gt;");
+    var b = 10;
+    {
+        var b = 70;
+        document.write("b (inside block) = " + b +"&lt;br&gt;")
+    }
+    document.write("b (outside block) = " + b + "&lt;br&gt;");
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                
+            </section>
+            <section id="functions" class="htmldisplayarea d-none">
+                <h1>JavaScript Functions</h1>
+                <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+                <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+                <h1>Basic Syntax</h1>
+                <code>
+                    <pre>
+function name(parameter1, parameter2, parameter3) {
+    // code to be executed
+}
+                    </pre>
+                </code>
+                <h1>Why Functions?</h1>
+                <p>You can reuse code: Define the code once, and use it many times.</p>
+                <p>You can use the same code many times with different arguments, to produce different results.</p>
+                <p>Basic Function Converting temperature Fahrenheit to Celsius </p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    function toCelsius(fah){
+        return (5/9) * (fah - 32);
+    }
+    document.write("28F = " +toCelsius(28) + "C");
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section>
+            <section id="strings" class="htmldisplayarea d-none">
+                <h1>Strings</h1>
+                <p>JavaScript strings are for storing and manipulating text.</p>
+                <p>A JavaScript string is zero or more characters written inside quotes.</p>
+
+                <p>Printing String Message</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let msg = "Hello";
+    document.write(msg);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>String Length</h1>
+                <p>To find the length of a string, use the built-in length property:</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let msg = "Hello";
+    document.write("length of "+msg+" is "+msg.length);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>String Content Replace</h1>
+                <p>The replace() method replaces a specified value with another value in a string.</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let msg = "Hello, How are you KARAN;
+    document.write("Before Replacing: "+ msg + "&lt;br&gt;");
+    let msg2 = msg.replace("KARAN","Rohit");
+    document.write("After Replacing: "+ msg2);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Changing Case</h1>
+                <p>We can change the string to uppercase and lowercase</p>
+                <p>Program for uppercase and lowercase</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let msg = "Hello, How are you KARAN";
+    document.write("Upper Case String: "+ msg.toUpperCase()+"&lt;br&gt;");
+    document.write("Lower Case String: "+ msg.toLowerCase());
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Trim String</h1>
+                <p>The trim() method removes whitespace from both sides of a string.</p>
+                <p>The trimStart() method works like trim(), but removes whitespace only from the start of a string.</p>
+                <p>The trimEnd() method works like trim(), but removes whitespace only from the end of a string.</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    let msg = "        Hello World     d ";
+    document.write("message length: "+msg.length+"&lt;br&gt;");
+    document.write("trim length output: "+ msg.trim().length+"&lt;br&gt;");
+    document.write("trimStart length output: "+ msg.trimStart().length+"&lt;br&gt;");
+    document.write("trimEnd length output: "+ msg.trimEnd().length);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section> 
+            <section id="array" class="htmldisplayarea d-none">
+                <h1>Arrays</h1>
+                <p>Arrays are object which holds the homogenous type of values</p>
+                <p>JavaScript arrays are written with square brackets.</p>
+                <p> Array items are separated by commas. </p>
+                <p>following code declares (creates) an array called cars, containing three items (car names):</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write(cars);
+    document.write("&lt;br&gt;" + "First Element of Array: " + cars[0])
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Array Length</h1>
+                <p>The length property of an array returns the length of an array (the number of array elements).</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write("Length of Array: "+ cars.length);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Adding Array Element</h1>
+                <p>Push method used to add array element at </p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write(cars+"&lt;br&gt;");
+    cars.push("Maruti");
+    document.write("Updated Array: "+ cars);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>The unshift method adds a new element to an array (at the beginning), and "unshifts" older elements.</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write(cars+"&lt;br&gt;");
+    cars.unshift("Maruti");
+    document.write("Updated Array: "+ cars);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <h1>Removing Array Elements</h1>
+                <p>The pop method removes the last element from an array</p>
+                <p>It returns the removed element</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write(cars+"&lt;br&gt;");
+    cars.pop();
+    document.write("Updated Array: "+ cars);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+                <p>The shift method removes the first array element and "shifts" all other elements to a lower index.</p>
+                <code>
+                    <pre>
+&lt;script&gt;
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.write(cars+"&lt;br&gt;");
+    cars.shift();
+    document.write("Updated Array: "+ cars);
+&lt;/script&gt;
+                    </pre>
+                    <button class="runCode">Run This Code</button>
+                </code>
+            </section> 
+            
+        </section>
+    </section>
+
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h1>Resources</h1>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Code EDITOR</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Email Us</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Developer</h1>
+                <ul>
+                    <li> KARAN</li>
+                    <li>BCA 1st Year (2nd Semester)</li>
+                    <li>Roll No 4204/22</li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h1>Social</h1>
+                <ul>
+                    <li><img src="img/facebook.webp" width="32" style="width: 32px;"></li>
+                    <li><img src="img/insta.png" width="32" style="width: 32px;"></li>
+                    <li><img src="img/twitter.png" width="32" style="width: 32px;"></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        var htmenucounter = 0;
+        var sideitem = document.querySelectorAll(".sideItems");
+        var htmlcont = document.querySelectorAll(".htmldisplayarea")
+        function sideView(x){
+            sideitem.forEach(
+            (sideitem, index) =>{
+                if(sideitem != x){
+                    sideitem.style.color = "white"
+                }
+                else{
+                    sideitem.style.color = "red";
+                    htmenucounter = index;
+                }
+            }
+        )
+        display()
+        }
+
+        function display(){
+            htmlcont.forEach(
+                (htmlcon, index) => {
+                    if(index != htmenucounter){
+                        htmlcon.style.display = "none";
+                    }
+                    else{
+                        htmlcon.style.display = "block";
+                    }
+                }
+            )
+        }        
+    </script>
+</body>
+
+</html>
